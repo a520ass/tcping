@@ -16,24 +16,8 @@ GIFS_DIR := Images/gifs
 
 # File lists
 RELEASE_ARTIFACTS := \
-	$(OUTPUT_DIR)/tcping-freebsd-amd64-static.tar.gz \
-	$(OUTPUT_DIR)/tcping-freebsd-amd64-dynamic.tar.gz \
-	$(OUTPUT_DIR)/tcping-freebsd-arm64-static.tar.gz \
-	$(OUTPUT_DIR)/tcping-freebsd-arm64-dynamic.tar.gz \
-	$(OUTPUT_DIR)/tcping-linux-amd64-static.tar.gz \
-	$(OUTPUT_DIR)/tcping-linux-amd64-dynamic.tar.gz \
 	$(OUTPUT_DIR)/tcping-linux-arm64-static.tar.gz \
-	$(OUTPUT_DIR)/tcping-linux-arm64-dynamic.tar.gz \
-	$(OUTPUT_DIR)/tcping-darwin-amd64-static.tar.gz \
-	$(OUTPUT_DIR)/tcping-darwin-amd64-dynamic.tar.gz \
-	$(OUTPUT_DIR)/tcping-darwin-arm64-static.tar.gz \
-	$(OUTPUT_DIR)/tcping-darwin-arm64-dynamic.tar.gz \
-	$(OUTPUT_DIR)/tcping-windows-amd64-static.zip \
-	$(OUTPUT_DIR)/tcping-windows-amd64-dynamic.zip \
-	$(OUTPUT_DIR)/tcping-windows-arm64-static.zip \
-	$(OUTPUT_DIR)/tcping-windows-arm64-dynamic.zip \
-	$(OUTPUT_DIR)/tcping-amd64.deb \
-	$(OUTPUT_DIR)/tcping-arm64.deb
+	$(OUTPUT_DIR)/tcping-linux-arm64-dynamic.tar.gz
 GIF_ARTIFACTS := \
 	$(GIFS_DIR)/tcping.gif \
 	$(GIFS_DIR)/tcping_resolve.gif \
