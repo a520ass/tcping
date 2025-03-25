@@ -16,8 +16,8 @@ GIFS_DIR := Images/gifs
 
 # File lists
 RELEASE_ARTIFACTS := \
-	$(OUTPUT_DIR)/tcping-linux-arm64-static.tar.gz \
-	$(OUTPUT_DIR)/tcping-linux-arm64-dynamic.tar.gz
+	$(OUTPUT_DIR)/tcping-linux-arm-static.tar.gz \
+	$(OUTPUT_DIR)/tcping-linux-arm-dynamic.tar.gz
 GIF_ARTIFACTS := \
 	$(GIFS_DIR)/tcping.gif \
 	$(GIFS_DIR)/tcping_resolve.gif \
@@ -105,6 +105,7 @@ $(TARGET_DIR)/%/tcping: $(TARGET_DIR)/%/
 	@export GOOS=$(word 1, $(subst -, ,$*)); \
 	export GOARCH=$(word 2, $(subst -, ,$*)); \
 	[ $(word 3, $(subst -, ,$*)) = static ] && export CGO_ENABLED=0; \
+	export GOARM=5; \
 	go build -ldflags "-s -w -X main.version=$(VERSION)" -o $@;
 
 # Per-target tcping.exe binary (Windows)
